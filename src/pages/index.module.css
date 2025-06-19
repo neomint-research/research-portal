@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-  min-height: 62vh; /* Golden ratio proportion */
+  min-height: 35vh; /* Reduced hero height */
   padding: 80px 0;
   background: var(--color-highlight); /* Solid mint background */
   position: relative;
@@ -28,55 +28,15 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.heroSubtitle {
-  font-size: 1.375rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 1.5rem;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-}
-
-.heroDescription {
-  max-width: 700px;
-  margin: 0 auto 3rem;
-}
-
-.heroTagline {
-  font-size: 1.25rem !important;
-  font-weight: 600;
-  line-height: 1.5 !important;
-  color: #ffffff !important;
-  margin-bottom: 1rem !important;
-  letter-spacing: -0.01em;
-}
-
-.heroDescription p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-}
-
-.heroDescription p:not(.heroTagline) {
-  font-weight: 400;
-}
-
-.heroStats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.stat {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+/* Thumbnail Styles */
+.heroThumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  object-fit: cover;
 }
 
 /* Mission Section */
@@ -93,18 +53,9 @@
   margin: 0 auto;
 }
 
-.missionTitle {
+.missionSubtitle {
   font-size: 3.5rem;
   font-weight: 800;
-  margin: 0 0 1rem;
-  color: var(--ifm-font-color-base);
-  text-align: center;
-  letter-spacing: -0.02em;
-}
-
-.missionSubtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
   color: var(--ifm-color-emphasis-700);
   margin: 0 0 3rem;
   text-align: center;
@@ -153,7 +104,7 @@
 /* Whitepapers Section */
 .whitepapers {
   padding: 80px 0;
-  background: var(--ifm-background-color);
+  background: rgba(0, 149, 143, 0.05);
 }
 
 .sectionHeader {
@@ -251,7 +202,7 @@
 /* Responsive Design */
 @media screen and (max-width: 996px) {
   .hero {
-    min-height: 62vh; /* Maintain golden ratio on tablets */
+    min-height: 35vh; /* Maintain reduced height on tablets */
     padding: 60px 0;
   }
 
@@ -259,12 +210,9 @@
     font-size: 3rem;
   }
 
-  .heroSubtitle {
-    font-size: 1.25rem;
-  }
-
-  .heroStats {
-    gap: 1.5rem;
+  .heroThumbnail {
+    width: 70px;
+    height: 70px;
   }
 
   .whitepaperGrid {
@@ -279,7 +227,7 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    min-height: 70vh; /* Slightly taller on mobile for better content fit */
+    min-height: 35vh; /* Maintain reduced height on mobile */
     padding: 40px 0;
   }
 
@@ -287,12 +235,10 @@
     font-size: 2.5rem;
   }
 
-  .heroSubtitle {
-    font-size: 1.125rem;
-  }
-
-  .heroDescription p {
-    font-size: 1rem;
+  .heroThumbnail {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
   }
 
   .missionSection {
@@ -300,12 +246,8 @@
     padding: 60px 0;
   }
 
-  .missionTitle {
-    font-size: 2.5rem;
-  }
-
   .missionSubtitle {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
   }
 
   .missionContentTitle {
@@ -360,17 +302,10 @@
   background: var(--ifm-background-color);
 }
 
-[data-theme='dark'] .heroTitle,
-[data-theme='dark'] .mint,
-[data-theme='dark'] .heroSubtitle,
-[data-theme='dark'] .heroTagline,
-[data-theme='dark'] .heroDescription p,
-[data-theme='dark'] .stat {
+[data-theme='dark'] .heroTitle {
   color: #ffffff; /* Ensure white text in dark mode */
 }
 
-[data-theme='dark'] .heroSubtitle,
-[data-theme='dark'] .heroDescription p,
-[data-theme='dark'] .stat {
-  color: rgba(255, 255, 255, 0.9);
+[data-theme='dark'] .heroThumbnail {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

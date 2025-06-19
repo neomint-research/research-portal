@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'NEOMINT Research',
+  title: 'NEOMINT-RESEARCH',
   tagline: 'Open-source research division of NeoMINT GmbH',
   favicon: 'img/favicon.ico',
 
@@ -62,9 +62,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/favicon.ico',
       navbar: {
-        title: 'NEOMINT Research',
+        title: 'NEOMINT-RESEARCH',
         items: [
-          {to: '/docs/whitepapers/2024/ai-ethics-framework', label: 'Research', position: 'left'},
+          {to: '/docs/whitepapers/2024/ai-ethics-framework', label: 'Portal', position: 'left'},
           {
             href: 'https://github.com/neomint-research/research-portal',
             label: 'GitHub',
