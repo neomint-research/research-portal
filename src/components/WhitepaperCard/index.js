@@ -1,8 +1,9 @@
 import React from 'react';
 import { User, Calendar, Label, Download } from 'iconoir-react';
+import Badge from '../Badge';
 import styles from './styles.module.css';
 
-export default function WhitepaperCard({ title, subtitle, author, date, category, tags, slug }) {
+export default function WhitepaperCard({ title, subtitle, author, date, category, tags, slug, format, depth }) {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
@@ -20,10 +21,40 @@ export default function WhitepaperCard({ title, subtitle, author, date, category
           <Calendar size={16} color="var(--color-highlight)" />
           <span>{date}</span>
         </div>
-        <div className={styles.metaItem}>
-          <Label size={16} color="var(--color-highlight)" />
-          <span>{category}</span>
-        </div>
+      </div>
+      <div className={styles.badges}>
+        {format && (
+          <Badge
+            icon={
+              format === 'whitepaper' ? '📄' :
+              format === 'essay' ? '✍️' :
+              format === 'discussion' ? '💭' :
+              format === 'framework' ? '🔧' : '📄'
+            }
+            label={format.charAt(0).toUpperCase() + format.slice(1)}
+            type="format"
+            variant={format}
+          />
+        )}
+        {depth && (
+          <Badge
+            icon={
+              depth === 'intro' ? '🚀' :
+              depth === 'deep' ? '🧠' :
+              depth === 'expert' ? '🎓' : '🚀'
+            }
+            label={depth.charAt(0).toUpperCase() + depth.slice(1)}
+            type="depth"
+            variant={depth}
+          />
+        )}
+        {category && (
+          <Badge
+            icon="🏷️"
+            label={category}
+            type="category"
+          />
+        )}
       </div>
       <div className={styles.tags}>
         {tags.map((tag) => (

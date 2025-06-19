@@ -52,7 +52,9 @@ function WhitepapersSection() {
       date: "2024-01-15",
       category: "Cybersecurity",
       tags: ["zero trust", "security architecture", "AI safety", "system design"],
-      slug: "whitepapers/2024/ai-ethics-framework"
+      slug: "whitepapers/2024/ai-ethics-framework",
+      format: "framework",
+      depth: "deep"
     },
     {
       title: "Ethics-Driven Development Framework",
@@ -61,7 +63,9 @@ function WhitepapersSection() {
       date: "2025-02-20",
       category: "AI Ethics",
       tags: ["responsible AI", "development framework", "ethical design", "governance"],
-      slug: "whitepapers/2025/context-aware-systems"
+      slug: "whitepapers/2025/context-aware-systems",
+      format: "framework",
+      depth: "expert"
     },
     {
       title: "Resilient System Architecture Patterns",
@@ -70,7 +74,9 @@ function WhitepapersSection() {
       date: "2024-11-10",
       category: "System Architecture",
       tags: ["resilience", "scalability", "infrastructure", "best practices"],
-      slug: "whitepapers/2024/neural-architecture-search"
+      slug: "whitepapers/2024/neural-architecture-search",
+      format: "whitepaper",
+      depth: "deep"
     }
   ];
 

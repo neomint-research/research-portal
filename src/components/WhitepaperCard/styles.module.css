@@ -104,6 +104,13 @@
   transform: translateY(-1px);
 }
 
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
 /* Dark mode adjustments */
 [data-theme='dark'] .card {
   background: var(--ifm-background-surface-color);
