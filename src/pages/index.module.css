@@ -30,8 +30,8 @@
 
 /* Thumbnail Styles */
 .heroThumbnail {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   margin: 0 auto 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -211,8 +211,8 @@
   }
 
   .heroThumbnail {
-    width: 70px;
-    height: 70px;
+    width: 140px;
+    height: 140px;
   }
 
   .whitepaperGrid {
@@ -236,8 +236,8 @@
   }
 
   .heroThumbnail {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 1rem;
   }
 
