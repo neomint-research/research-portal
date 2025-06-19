@@ -35,3 +35,56 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Footer styles */
+.footer {
+  background-color: var(--color-highlight);
+  color: #ffffff;
+}
+
+.footer__title {
+  color: #ffffff;
+}
+
+.footer__link {
+  color: #ffffff;
+}
+
+.footer__link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Ensure all footer text elements are white */
+.footer__links,
+.footer__col,
+.footer__item {
+  color: #ffffff;
+}
+
+/* Footer logo and title styling */
+.footer__logo {
+  filter: brightness(0) invert(1);
+}
+
+/* Dark theme footer adjustments */
+[data-theme='dark'] .footer {
+  background-color: var(--color-highlight);
+}
+
+[data-theme='dark'] .footer__title,
+[data-theme='dark'] .footer__link,
+[data-theme='dark'] .footer__copyright,
+[data-theme='dark'] .footer__links,
+[data-theme='dark'] .footer__col,
+[data-theme='dark'] .footer__item {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .footer__link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}

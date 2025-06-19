@@ -1,25 +1,12 @@
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
-  background: linear-gradient(180deg, 
-    var(--ifm-background-color) 0%, 
-    var(--ifm-background-surface-color) 100%);
+  min-height: 62vh; /* Golden ratio proportion */
+  padding: 80px 0;
+  background: var(--color-highlight); /* Solid mint background */
   position: relative;
   overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, var(--color-highlight) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, var(--color-highlight) 0%, transparent 50%);
-  opacity: 0.05;
-  pointer-events: none;
+  display: flex;
+  align-items: center;
 }
 
 .heroContent {
@@ -33,17 +20,18 @@
   font-weight: 800;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
-  color: var(--ifm-font-color-base);
+  color: #ffffff;
 }
 
 .mint {
-  color: var(--color-highlight);
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .heroSubtitle {
   font-size: 1.375rem;
   font-weight: 500;
-  color: var(--ifm-color-emphasis-800);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0 0 1.5rem;
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -58,7 +46,7 @@
   font-size: 1.25rem !important;
   font-weight: 600;
   line-height: 1.5 !important;
-  color: var(--ifm-color-emphasis-800) !important;
+  color: #ffffff !important;
   margin-bottom: 1rem !important;
   letter-spacing: -0.01em;
 }
@@ -66,7 +54,7 @@
 .heroDescription p {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: var(--ifm-color-emphasis-600);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
 
@@ -88,7 +76,78 @@
   gap: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mission Section */
+.missionSection {
+  min-height: 38vh; /* 38% of viewport height as requested */
+  padding: 80px 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.missionContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.missionTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  color: var(--ifm-font-color-base);
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.missionSubtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
   color: var(--ifm-color-emphasis-700);
+  margin: 0 0 3rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.missionContentTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 2rem;
+  color: var(--ifm-font-color-base);
+  letter-spacing: -0.01em;
+}
+
+.missionText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.missionText p {
+  margin-bottom: 1.5rem;
+}
+
+.missionText strong {
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+.missionText ul {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.missionText li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+}
+
+.missionClosing {
+  margin-top: 2rem !important;
+  font-size: 1.25rem !important;
+  text-align: center;
 }
 
 /* Whitepapers Section */
@@ -125,10 +184,75 @@
   margin-top: 2rem;
 }
 
+/* Badge Section */
+.badgeSection {
+  padding: 80px 0;
+  background: rgba(0, 149, 143, 0.9); /* Mint with 90% opacity */
+  position: relative;
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.badge:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.badgeIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.badge:hover .badgeIcon {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.badgeTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.badgeDescription {
+  font-size: 0.938rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 996px) {
   .hero {
-    padding: 80px 0 60px;
+    min-height: 62vh; /* Maintain golden ratio on tablets */
+    padding: 60px 0;
   }
 
   .heroTitle {
@@ -146,9 +270,19 @@
   .whitepaperGrid {
     grid-template-columns: 1fr;
   }
+
+  .badgeGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    min-height: 70vh; /* Slightly taller on mobile for better content fit */
+    padding: 40px 0;
+  }
+
   .heroTitle {
     font-size: 2.5rem;
   }
@@ -161,18 +295,82 @@
     font-size: 1rem;
   }
 
+  .missionSection {
+    min-height: auto; /* Allow natural height on mobile */
+    padding: 60px 0;
+  }
+
+  .missionTitle {
+    font-size: 2.5rem;
+  }
+
+  .missionSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .missionContentTitle {
+    font-size: 1.5rem;
+  }
+
+  .missionText {
+    font-size: 1rem;
+  }
+
+  .missionClosing {
+    font-size: 1.125rem !important;
+  }
+
   .sectionTitle {
     font-size: 2rem;
+  }
+
+  .badgeSection {
+    padding: 60px 0;
+  }
+
+  .badgeGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .badge {
+    padding: 1.5rem;
+  }
+
+  .badgeIcon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .badgeTitle {
+    font-size: 1.125rem;
+  }
+
+  .badgeDescription {
+    font-size: 0.875rem;
   }
 }
 
 /* Dark mode adjustments */
 [data-theme='dark'] .hero {
-  background: linear-gradient(180deg, 
-    var(--ifm-background-color) 0%, 
-    rgba(30, 30, 30, 0.5) 100%);
+  background: var(--color-highlight); /* Keep mint background in dark mode */
 }
 
-[data-theme='dark'] .hero::before {
-  opacity: 0.03;
+[data-theme='dark'] .missionSection {
+  background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .heroTitle,
+[data-theme='dark'] .mint,
+[data-theme='dark'] .heroSubtitle,
+[data-theme='dark'] .heroTagline,
+[data-theme='dark'] .heroDescription p,
+[data-theme='dark'] .stat {
+  color: #ffffff; /* Ensure white text in dark mode */
+}
+
+[data-theme='dark'] .heroSubtitle,
+[data-theme='dark'] .heroDescription p,
+[data-theme='dark'] .stat {
+  color: rgba(255, 255, 255, 0.9);
 }
