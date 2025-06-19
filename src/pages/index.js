@@ -15,10 +15,11 @@ function Hero() {
             NEOM<span className={styles.mint}>INT</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            Research Portal for Advanced AI Systems
+            Cybersecurity is our origin. AI our passion. Open source our commitment.
           </p>
           <div className={styles.heroDescription}>
-            <p>Cutting-edge research in artificial intelligence, machine learning, and ethical AI development.</p>
+            <p className={styles.heroTagline}>Strategic knowledge from practice, for practice. Free. Clear. Citable.</p>
+            <p>1/3 of our time dedicated to open research, frameworks, and real-world insights.</p>
           </div>
           <div className={styles.heroStats}>
             <div className={styles.stat}>
@@ -45,30 +46,30 @@ function Hero() {
 function WhitepapersSection() {
   const sampleWhitepapers = [
     {
-      title: "AI Ethics Framework",
-      subtitle: "Establishing Ethical Guidelines for AI Development",
-      author: "Dr. Sarah Chen",
+      title: "Zero Trust Architecture in AI Systems",
+      subtitle: "Implementing Security-First Design for Autonomous Systems",
+      author: "NEOMINT Research Team",
       date: "2024-01-15",
-      category: "AI Ethics",
-      tags: ["ethics", "governance", "AI safety", "responsible AI"],
+      category: "Cybersecurity",
+      tags: ["zero trust", "security architecture", "AI safety", "system design"],
       slug: "whitepapers/2024/ai-ethics-framework"
     },
     {
-      title: "Context-Aware Systems",
-      subtitle: "Advanced Context Recognition in Modern AI",
-      author: "Dr. Michael Roberts",
+      title: "Ethics-Driven Development Framework",
+      subtitle: "From Compliance to Conviction in AI Development",
+      author: "NEOMINT Research Team",
       date: "2025-02-20",
-      category: "Machine Learning",
-      tags: ["context awareness", "adaptive systems", "neural networks"],
+      category: "AI Ethics",
+      tags: ["responsible AI", "development framework", "ethical design", "governance"],
       slug: "whitepapers/2025/context-aware-systems"
     },
     {
-      title: "Neural Architecture Search",
-      subtitle: "Automated Design of Deep Learning Models",
-      author: "Dr. Lisa Wang",
+      title: "Resilient System Architecture Patterns",
+      subtitle: "Building Anti-Fragile AI Infrastructure at Scale",
+      author: "NEOMINT Research Team",
       date: "2024-11-10",
-      category: "Deep Learning",
-      tags: ["AutoML", "architecture search", "optimization"],
+      category: "System Architecture",
+      tags: ["resilience", "scalability", "infrastructure", "best practices"],
       slug: "whitepapers/2024/neural-architecture-search"
     }
   ];
@@ -77,9 +78,9 @@ function WhitepapersSection() {
     <section className={styles.whitepapers}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Latest Research</h2>
+          <h2 className={styles.sectionTitle}>From Practice, For Practice</h2>
           <p className={styles.sectionSubtitle}>
-            Explore our collection of cutting-edge AI research papers
+            Knowledge that matters - tested in real environments, shared openly
           </p>
         </div>
         <div className={styles.whitepaperGrid}>
@@ -97,7 +98,7 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="NEOMINT Research Portal - Advanced AI Research and Development">
+      description="NEOMINT Research Portal - Strategic knowledge from practice, for practice">
       <Hero />
       <WhitepapersSection />
     </Layout>
