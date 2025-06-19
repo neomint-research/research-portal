@@ -3,13 +3,24 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import WhitepaperCard from '@site/src/components/WhitepaperCard';
 import VerticalDivider from '@site/src/components/VerticalDivider';
+import { DataNetwork } from '@neomint/animations';
 import styles from './index.module.css';
 
 function Hero() {
   return (
     <div className={styles.hero}>
+      <DataNetwork
+        theme="corporate"
+        preset="security"
+        opacity={0.25}
+        backgroundColor="transparent"
+        width="100%"
+        height="100%"
+        accessibility="respect-motion"
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
+      />
       <div className="container">
-        <div className={styles.heroContent}>
+        <div className={styles.heroContent} style={{ position: 'relative', zIndex: 2 }}>
           <img src={`/img/thumbnail_white.png?v=${Date.now()}`} alt="NEOMINT" className={styles.heroThumbnail} />
           <h1 className={styles.heroTitle}>
             NEOMINT-RESEARCH

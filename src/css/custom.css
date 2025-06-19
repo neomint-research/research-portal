@@ -7,12 +7,12 @@
 /* You can override the default Infima variables here. */
 :root {
   --color-background: #FFFFFF;
-  --color-main: #00202B;
+  --color-main: #002B2B;
   --color-highlight: #00958F;
   --color-supporting: #8BA6A5;
   --color-accent: #FF724D;
   --ifm-color-primary: #00958F;
-  --ifm-navbar-background-color: #00202B;
+  --ifm-navbar-background-color: #002B2B;
   --ifm-navbar-link-color: #FFFFFF;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -87,4 +87,21 @@
 
 [data-theme='dark'] .footer__link:hover {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* Navbar icon styles */
+.navbar__icon {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.navbar__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.navbar__icon:hover svg {
+  opacity: 0.8;
 }
