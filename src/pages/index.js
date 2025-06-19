@@ -10,7 +10,7 @@ function Hero() {
     <div className={styles.hero}>
       <div className="container">
         <div className={styles.heroContent}>
-          <img src="/img/thumbnail_white.png" alt="NEOMINT" className={styles.heroThumbnail} />
+          <img src={`/img/thumbnail_white.png?v=${Date.now()}`} alt="NEOMINT" className={styles.heroThumbnail} />
           <h1 className={styles.heroTitle}>
             NEOMINT-RESEARCH
           </h1>
